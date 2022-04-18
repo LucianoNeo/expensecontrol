@@ -17,11 +17,8 @@
 <header>
 <a href="index.html"><h1>Expense Control 💵 v1.0</h1></a>
 <div class="menu">
-<p onclick="mostraSecao('visualizar','cadastrar')">Visualizar 👓</p>
-
-<p onclick="mostraSecao('cadastrar','visualizar')">Cadastrar 📑</p>
-
-<p onclick="mostraGerenciar()">Gerenciar 🛠</p>
+  <a href="index.html"><img src="img/home-icon.png" alt="" height="30"></a>
+ <img src="img/email icon.png" alt="" width="30" onclick="contato()">
 </div>
 </header>
 <div id="totalMes" class="total">
@@ -30,8 +27,26 @@
   <div class="div1"><p>Seja bem vindo ao Expense Control, seu controle de gastos diários!</p></div>
   <div class="div2"><img src="https://cdn-icons-png.flaticon.com/512/5229/5229354.png" alt=""></div>
   <div class="div3"><span>Developed by Luciano Neo |2022|</span></div>
-  
 </div>
+
+<nav id="btn-home">
+<div class="home-cad" onclick="mostraSecao('cadastrar','visualizar')">
+  <img src="img/register-icon-25.jpg" alt="" width="50">
+  <h1>Cadastrar Despesas</h1>
+</div>
+
+<div class="home-vis" onclick="mostraSecao('visualizar','cadastrar')">
+  <img src="img/view.png" alt="" width="50">
+  <h1>Visualizar Despesas</h1>
+</div>
+
+<div class="home-ger" onclick="mostraGerenciar()">
+  <img src="img/project-management-icon-v2.png" alt="" width="50">
+  <h1>Gerenciar Despesas</h1>
+</div>
+
+</nav>
+
 <section id='visualizar'class="visualizar">
 <div id="escolha">
     <p>Escolha o Mês</p>
@@ -175,6 +190,19 @@
         <p id='limpar' onclick="limpar()">Limpar Registros</p>
     </section>
 
+    <section class='modal' id="modal">
+      <div class="modalinner">
+        <p class="fechar" id="fechar" onclick="fechar()">x</p>
+        <h1>Contato:</h1>
+        <div class="icones">
+        <a href="https://www.linkedin.com/in/luciano-dos-santos-bueno-58363373/" target="blank"><img src="img/Linkedin-icon-design-premium-vector-PNG.png" alt="Linkedin"></a>
+        <a href="mailto:tec.info.luciano@hotmail.com"target="blank"><img src="img/email icon black.png" alt="Email"></a>
+        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5541988281937"target="blank"><img src="img/whats icon.png" alt="Whatsapp" ></a>
+        
+      </div>
+      </div>
+      
+    </section>
 
 
 <script src="./script.js"></script>

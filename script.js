@@ -159,6 +159,7 @@ function mostraGerenciar() {
     document.getElementById('visualizar').style.display='none'
     document.getElementById('cadastrar').style.display='none'
     campoTotalMes.style.display='none'
+    document.getElementById('btn-home').style.display='none'
     gerenciar()
     
 }
@@ -179,7 +180,7 @@ function mostraSecao(secao,desligar) {
     apagar.style.display ='none'
     document.getElementById('bv').style.display='none'
     resetaCadastro()
-    
+    document.getElementById('btn-home').style.display='none'
     }
 
 function resetaTabelas() {
@@ -514,4 +515,14 @@ function pegaUltimoId() {
         }
     
     resultado.innerHTML = elemento    
+    }
+
+
+    function contato() {
+        document.getElementById('modal').style.display='block'
+        
+    }
+
+    function fechar() {
+        document.getElementById('modal').style.display='none'
     }
