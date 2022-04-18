@@ -457,7 +457,7 @@ table button {
     
     #limpar{
       position: absolute;
-      top: 63px;
+      top: 47px;
       right: 15px;
     }
     
@@ -465,6 +465,57 @@ table button {
       height: 500px;
   }
 
+  nav{
+    width: 105vw;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 100px;
+   
+  }
+  
+  nav h1{
+    font-size: 16px;
+  }
+  
+  .home-cad{
+    padding: 20px;
+    width: 30vw;
+    height: 100px;
+    background-color: #0e7ba0;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .home-vis{
+    padding: 20px;
+    width: 30vw;
+    height: 100px;
+    background-color: #b92121;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .home-ger{
+    padding: 20px;
+    width:  75vw;
+    height:100px;
+    background-color: forestgreen;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer
+  }
+  
+  #bv{
+    position: relative;
+    top: -446px;
+    animation: drop 0.8s ease forwards;
+  }
 }
 
 .modal{
