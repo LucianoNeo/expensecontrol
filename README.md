@@ -3,6 +3,9 @@ Expense control é um sistema web para controle de despesas diárias/mensais.
 Está sendo desenvolvido com base nos estudos em HTML5, CSS3 e Javascript ES6.
 
 ## Versão 1.0 (estável) 18/04/2022
+Rodando neste link:
+https://lucianoneo.github.io/expensecontrol/
+
 Programada totalmente com javascript sem utilização de bibliotecas ou frameworks externos.
 Possui:
 - Cadastro de despesas, podendo ser divididas em 4 categorias (fixas,lanches,extras e parceladas)<br>
