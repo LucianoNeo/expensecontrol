@@ -20,3 +20,4 @@ Versão em desenvolvimento, com os seguintes objetivos:
 - Criar sistema de login
 - Fazer integração com back end para salvamento dos dados em BD
 - Utilizar bibliotecas e frameworks para agilizar a construção (Bootstrap, bulma, nodeJs, nestJS, React)
+- Avaliar possível migração para aplicativo de android/ios (react native)
