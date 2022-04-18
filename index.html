@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Gastos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Roboto:wght@400;700&family=Syne+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" type="imagex/png" href="./img/icon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<header>
+<a href="index.html"><h1>Expense Control 💵 v1.0</h1></a>
+<div class="menu">
+<p onclick="mostraSecao('visualizar','cadastrar')">Visualizar 👓</p>
+
+<p onclick="mostraSecao('cadastrar','visualizar')">Cadastrar 📑</p>
+
+<p onclick="mostraGerenciar()">Gerenciar 🛠</p>
+</div>
+</header>
+<div id="totalMes" class="total">
+</div>
+<div class="bv" id="bv">
+  <div class="div1"><p>Seja bem vindo ao Expense Control, seu controle de gastos diários!</p></div>
+  <div class="div2"><img src="https://cdn-icons-png.flaticon.com/512/5229/5229354.png" alt=""></div>
+  <div class="div3"><span>Developed by Luciano Neo |2022|</span></div>
+  
+</div>
+<section id='visualizar'class="visualizar">
+<div id="escolha">
+    <p>Escolha o Mês</p>
+    <select name="mes" id="mes">
+      <option value="jan">Janeiro</option>
+      <option value="fev">Fevereiro</option>
+      <option value="mar">Março</option>
+      <option value="abr">Abril</option>
+      <option value="mai">Maio</option>
+      <option value="jun">Junho</option>
+      <option value="jul">Julho</option>
+      <option value="ago">Agosto</option>
+      <option value="set">Setembro</option>
+      <option value="out">Outubro</option>
+      <option value="nov">Novembro</option>
+      <option value="dez">Dezembro</option>
+    </select>
+    <input type="button" value="Selecionar" onclick="escolheMes()">
+</div>
+
+<div class="container">
+
+    <table>
+        
+        <thead>
+           
+          <tr>
+            <th>Data</th>
+            <th>Serviço/Produto</th>
+            <th>Valor</th>
+            <th>Fixas 🏡</th>
+          </tr>
+        </thead>
+        <tbody id="mostraFixas">
+        </tbody>
+
+        <table>
+            <thead>
+                
+              <tr>
+                <th>Data</th>
+                <th>Serviço/Produto</th>
+                <th>Valor</th>
+                <th>Lanches 🍔</th>
+              </tr>
+            </thead>
+            <tbody id="mostraLanches">
+            </tbody>
+    <table>
+            <thead>
+               
+              <tr>
+                <th>Data</th>
+                <th>Serviço/Produto</th>
+                <th>Valor</th>
+                <th>Extras 🎁</th>
+              </tr>
+            </thead>
+            <tbody id="mostraExtras">
+            </tbody>
+            <table>
+                <thead>
+                    
+                  <tr>
+                    <th>Data</th>
+                    <th>Serviço/Produto</th>
+                    <th>Valor</th>
+                    <th>Parcel 🔢</th>
+                  </tr>
+                </thead>
+                <tbody id="mostraParcelado">
+                </tbody>
+                </table>
+
+                
+            </section>
+            </div>
+        <section class="cadastrar" id="cadastrar">
+            <p>Cadastro</p> 
+            <form action="">
+              <input type="number" name="id" id="id"><br>
+                <label for="mes"><Mês>Mês</label><br>
+                <select name="mes" id="mesCad">
+                    <option value="jan">Janeiro</option>
+                    <option value="fev">Fevereiro</option>
+                    <option value="mar">Março</option>
+                    <option value="abr">Abril</option>
+                    <option value="mai">Maio</option>
+                    <option value="jun">Junho</option>
+                    <option value="jul">Julho</option>
+                    <option value="ago">Agosto</option>
+                    <option value="set">Setembro</option>
+                    <option value="out">Outubro</option>
+                    <option value="nov">Novembro</option>
+                    <option value="dez">Dezembro</option>
+                </select><br>
+                <label for="tipo">Tipo:</label><br>
+                <select name="tipo" id="tipo" onchange="ligaParcelas()">
+                  <option value="fixa">Fixas</option>
+                  <option value="lanches">Lanches</option>
+                  <option value="extras">Extras</option>
+                  <option value="parcelado">Parceladas</option>
+                </select><br>
+                <div class='parcelas' id="parcelas">
+                  <label for="parcela">Parcela:</label>
+                  <input type="number" name="parcela" id="parcela" min="1"><br>
+                  <label for="data">de:</label>
+                <input type="number" name="totalParcelas" id="totalParcelas" min="2"><br>
+                </div>
+                <label for="data">Data:</label><br>
+                <input autocomplete="off" type="text" name="data" id="data"><br>
+                <label for="produto">Produto/Serviço:</label><br>
+                <input autocomplete="off" type="text" name="produto" id="produto"><br>
+                <label for="valor">Valor:</label><br>
+                <input autocomplete="off" type="text" name="valor" id="valor"><br>             
+                <input id="btnCadastro"type="button" value="Cadastrar" onclick="cadastrar()">
+                <button id="btnEditar"type="button" value="Editar" disabled onclick="enviar()">Editar</button> 
+            </form>
+        </section>
+
+    
+    
+    <section id="gerenciamento" class="gerenciamento">
+      <span class="titulo-secao">Gerenciamento</span>
+      <table>
+        <thead>
+            
+          <tr>
+            <th onclick="ordenar('id')">ID</th>
+            <th onclick="ordenar('mes')">Mês</th>
+            <th onclick="ordenar('data')">Data</th>
+            <th onclick="ordenar('nome')">Serviço/Produto</th>
+            <th onclick="ordenar('valor')">Valor</th>
+            <th onclick="ordenar('tipo')">Tipo</th>
+            <th onclick="ordenar('parcelas')">Parcelas</th>
+          </tr>
+        </thead>
+        <tbody id="mostraGer">
+        </tbody>
+        </table>
+        <p id='limpar' onclick="limpar()">Limpar Registros</p>
+    </section>
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
+
