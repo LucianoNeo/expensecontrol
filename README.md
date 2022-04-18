@@ -12,4 +12,4 @@ Parceladas são cadastradas automaticamente seguindo a quantidade de parcelas to
 Exclusão e edição disponível através de botões individuais nos itens.
 - Gerenciamento de despesas
 Seção com gerenciamento de todos os itens, podendo fazer ordenação de valores, edição e exclusão individual ou de toda a base de dados.
-- Dados salvo no LocalStorage do navegador.
+- Dados salvos no LocalStorage do navegador.
